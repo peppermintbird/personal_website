@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayane Rocha | Home</title>
+    
+    <!-- Fonts: Inter (Sans) and Playfair Display (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+        <svg id="toggleIcon" class="toggle-figure" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <div class="container">
+        
+        <header>
+            <nav class="nav-shortcuts">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="personal.html" class="nav-link">Personal</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="search-pill">
+                <svg class="search-icon-minimal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" class="search-input-pill" placeholder="Search">
+            </div>
+        </header>
+
+        <section class="hero">
+            <!-- 1. Profile Pic in Middle-Center -->
+            <img src="assets/profile_pic/20251223_176940.png" 
+                 alt="Profile" class="profile-pic">
+            
+            <div class="bio">
+                <!-- 2. "Hi there, I'm Rayane" -->
+                <h1>Hi there, I'm Rayane</h1>
+                <span class="bio-role">Linguistics & Computation</span>
+                
+                <!-- 3. Short Bio -->
+                <p>
+                    I'm an undergraduate linguistics student at the 
+                    <a href="https://www-ufpb-br.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=pt-BR#" target="_blank" class="institution">Federal University of Paraíba (UFPB)</a> 
+                    in Brazil, expected to graduate in 2026-7.
+                </p>
+
+                <p>
+                    I was awarded a scholarship through the 
+                    <a href="https://roboprox.eu/" target="_blank" class="institution">ROBOPROX</a> 
+                    project, coordinated by 
+                    <a href="https://www.cvut.cz/en" target="_blank" class="institution">Czech Technical University</a> in Prague. Currently, I am conducting my thesis research at the
+                    <a href="https://giuliadangelo.github.io/html/npclab.html" target="_blank" class="institution">Neuroinspired Perception and Cognition Lab</a> under the supervision of <a href="https://giuliadangelo.github.io/" target="_blank" class="institution">Giulia D'Angelo</a> and <a href="http://karlastepanova.cz/" target="_blank" class="institution">Karla Stepanova</a>.
+                </p>
+                
+                <!-- 4. Interests on tags with moving pastel rainbow colors -->
+                <!-- Updated HTML structure to wrap text in <span> for layering -->
+                <div class="interest-wrapper">
+                    <span class="interest-tag"><span>Computational Linguistics</span></span>
+                    <span class="interest-tag"><span>Neuromorphic Computation</span></span>
+                    <span class="interest-tag"><span>Psycholinguistics</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="highlights">
+            <div class="section-header">
+                <h2 class="section-title">Highlights</h2>
+            </div>
+            
+            <div class="highlights-grid">
+                <a href="#" class="card">
+                    <h3>Data Analytics</h3>
+                    <p>Ethical interpretation of large datasets and transparency.</p>
+                </a>
+
+                <a href="#" class="card">
+                    <h3>snnTorch</h3>
+                    <p>Deep diving into neuromorphic computing and spiking neural networks.</p>
+                </a>
+
+                <a href="#" class="card">
+                    <h3>Stories</h3>
+                    <p>Narratives bridging the gap between science and emotion.</p>
+                </a>
+
+                <a href="#" class="card">
+                    <h3>Philosophy</h3>
+                    <p>Inspire, broaden, and support different perspectives of the world.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <blockquote>
+                “If everyone had the luxury of expressing their unique combinations of talents in this world, our society would be transformed overnight.”
+            </blockquote>
+            <span class="quote-author">Neil DeGrasse Tyson</span>
+        </section>
+
+        <footer id="contact">
+            <div>
+                © 2026 Rayane Rocha
+            </div>
+            <div class="footer-links">
+                <a href="mailto:rayanerocha090@gmail.com">Email</a>
+                <a href="https://github.com/peppermintbird">Github</a>
+                <a href="https://www.linkedin.com/in/rayane-rocha-ds/">LinkedIn</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JS script-->
+    <script src="js/script.js"></script>
+</body>
+</html>

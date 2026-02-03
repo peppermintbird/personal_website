@@ -1,0 +1,238 @@
+@import "./bio.css"; /* Profile Section */
+@import "./highlights.css"; /* Highlights Grid */
+
+:root {
+        
+            /* Light Mode (Default) */
+            --bg-color: #ffffff;
+            --text-color: #37352f;
+            --text-secondary: #787774;
+            --heading-color: #8c6b5d; /* Slightly warmer/softer brown */
+            --border-color: #e6e6e6;
+            --card-bg: #fafafa;
+            --card-hover: #f4f4f4;
+            --highlight-bg: rgba(140, 107, 93, 0.08);
+            --toggle-color: #37352f;
+        }
+
+        [data-theme="dark"] {
+            /* Dark Mode */
+            --bg-color: #1a1a1a;
+            --text-color: #dcdcdc;
+            --text-secondary: #a0a0a0;
+            --heading-color: #d6b4a1;
+            --border-color: #333;
+            --card-bg: #242424;
+            --card-hover: #2a2a2a;
+            --highlight-bg: rgba(214, 180, 161, 0.1);
+            --toggle-color: #dcdcdc;
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, fill 0.4s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--heading-color);
+            font-weight: 500;
+            margin-top: 0;
+            letter-spacing: 0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            text-decoration-line: none;
+            text-decoration-thickness: 0;
+            color: inherit;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Artistic Theme Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 3rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            color: var(--toggle-color);
+            opacity: 0.7;
+            transition: opacity 0.3s ease, transform 0.5s ease;
+            z-index: 10;
+        }
+        
+        .theme-toggle:hover {
+            opacity: 1;
+            transform: rotate(15deg);
+        }
+
+        .toggle-figure {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        /* Minimal Header & Search */
+        header {
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        /* Round Frame Search Styles */
+        .search-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            width: fit-content;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        
+        .search-pill:hover, .search-pill:focus-within {
+            border-color: var(--heading-color);
+            background-color: var(--card-hover);
+        }
+
+        .search-icon-minimal {
+            width: 14px;
+            height: 14px;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        .search-input-pill {
+            border: none;
+            background: none;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            width: 50px;
+            padding: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .search-input-pill:focus {
+            width: 140px;
+        }
+
+        .search-input-pill::placeholder {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Shortcuts / Nav */
+        .nav-shortcuts {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--heading-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--heading-color);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 3rem;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .quote-section blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0 auto 1.5rem auto;
+            max-width: 550px;
+        }
+
+        .quote-author {
+            color: var(--heading-color);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--heading-color);
+        }
